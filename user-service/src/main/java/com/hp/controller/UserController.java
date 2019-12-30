@@ -19,7 +19,9 @@ public class UserController {
     private RestOperations restTemplate;
 
     @GetMapping("{id}")
-    public User queryById(@PathVariable("id") Long id) {
+    public User queryById(@PathVariable("id") Long id)  {
+
+//        Thread.sleep(4000);
         return this.userService.queryById(id);
     }
 }
